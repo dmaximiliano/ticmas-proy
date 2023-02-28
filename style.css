@@ -1,0 +1,612 @@
+/* INDEX
+
+1 --- Home
+2 --- About
+3 --- Experiencia
+4 --- Habilidades
+5 --- Footer
+6 --- MediaQuery-800px
+7 --- MediaQuery-1267px
+8 --- MediaQuery-1600px */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,100;1,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    text-decoration: none;
+    outline: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+img{
+    width: 100%;
+}
+a, .btn{
+    cursor: pointer;
+}
+
+:root{
+    --night:#00120b;
+    --gunmetal:#253237;
+    --payne-grey:#5c6b73;
+    --deep-sky-blue:#48beff;
+    --snow: #fcf7f8;
+
+}
+
+
+body{
+    background-color: var(--snow);
+}
+
+.titulo{
+    font-size: 33px;
+    color: var(--night)
+}
+
+
+/* 1 --- Home ----------------- */
+
+
+
+.hero{
+    background-image: url(img/Header-Photo.jpg);
+    min-height: 80vh;
+    background-size: cover ;
+    display:flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px 20px;
+}
+
+.header .logo{
+    font-size: 16px;
+    color: var(--night);
+}
+
+.header .btn-menu, .close-menu{
+    padding: 2px 7px;
+    background-color: transparent;
+    border: 1px solid var(--snow);
+    border-radius: 5px;
+}
+
+.header .btn-menu i, .close-menu i{
+    font-size: 20px;
+    color:var(--snow)
+}
+
+.menu-mob{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--night);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 15px 20px;
+}
+
+header .mob-menu-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-dkp-nav{
+    display: none;
+}
+
+header .menu-mob-nav{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+header .menu-mob-nav ul{
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+header .menu-mob-nav a{
+    font-size: 25px;
+    color: var(--snow);
+}
+
+header .menu-mob .logo{
+    color: var(--snow);
+}
+
+.hero-contenido{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-contenido .contenido-tituto{
+    font-family: 'Zeyada', cursive;
+    font-size: 45px;
+    color: var(--night)
+}
+
+.hero-contenido .contenido-subtituto{
+    margin-top: -20px;
+    font-size: 20px;
+    color: var(--payne-grey);
+}
+
+
+/* 2 --- About ----------------- */
+
+
+#about{
+    margin-top: 110px;
+    padding: 0 20px;
+}
+
+#about .about-descripcion{
+    color: var(--gunmetal);
+    margin-top: 25px;
+}
+
+
+/* 3 --- Experiencia ----------------- */
+
+
+#experiencia{
+    margin-top: 110px;
+    padding: 0 20px;
+}
+
+#experiencia .experiencia-titulo{
+    margin-bottom: 25px;
+}
+
+#experiencia .experiencia-grid{
+    display:grid;
+    grid-template-columns: 1fr 3fr 35px;
+    column-gap: 10px;
+    row-gap: 40px;
+}
+
+#experiencia .grid-item{
+    padding: 0 5px;
+}
+
+#experiencia .experiencia-fecha h3{
+    color: var(--night);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#experiencia .experiencia-posicion{
+    color: var(--deep-sky-blue);
+    font-size: 16px;
+}
+
+#experiencia .experiencia-empresa{
+    color: var(--gunmetal);
+    font-style: italic;
+    font-size: 15px;
+}
+
+#experiencia .exp-item{
+    color: var(--payne-grey);
+    margin-top: 6px;
+    list-style-type:disc;
+    font-size: 13px;
+}
+
+#experiencia .experiencia-btn{
+    min-width: 35px;
+    min-height: 35px;
+    background-color: transparent;
+    border: none;
+}
+
+#experiencia .experiencia-btn i{
+    color: var(--deep-sky-blue);
+    font-size: 17px;
+}
+
+
+/* 4 --- Habilidades ----------------- */
+
+
+#habilidades{
+    margin-top: 90px;
+    background-color: var(--gunmetal);
+    padding: 80px 20px 110px 20px;
+}
+
+#habilidades .habilidades-titulo{
+    margin-bottom: 25px;
+    color: var(--snow);
+}
+
+#habilidades .habilidades-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+#habilidades .grid-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--snow);
+    border-radius: 20px;
+    aspect-ratio: 1/1;
+    min-width: 90px;
+    min-height: 90px;
+    width: 100%;
+    height: 100%;
+}
+
+#habilidades .grid-item-titulo{
+ font-size: 13px;
+ font-weight: 200;
+ color:var(--snow);
+
+}
+    
+#habilidades .habilidades-icon{
+    font-size: 37px;
+    color: var(--deep-sky-blue);
+}
+
+
+
+/* 5 --- Footer ----------------- */
+
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    background-color: var(--night);
+    padding: 60px 20px 40px 20px;
+}
+
+footer i,p {
+    color: var(--snow)
+}
+
+#contacto{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contacto > div{
+    padding: 7px 0;
+}
+
+#contacto .contacto-icon{
+    font-size: 17px;
+}
+
+#contacto p {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+footer .redes-sociales > a{
+    margin: 0 22px;
+}
+
+
+
+/* 6 --- MediaQuery-800px ----------------- */
+
+@media screen and (min-width: 800px) {
+    header{
+        padding: 50px 90px;
+    }
+
+    .header .logo{
+        font-size: 26px;
+    }
+
+    header .btn-menu{
+        display: none;
+    }
+
+    .menu-mob{
+        display: none;
+    }
+    header .menu-dkp-nav{
+        display: flex;
+        align-items: center;
+    }
+    header .menu-dkp-nav ul{
+        text-transform: uppercase;
+        display: flex;
+    }
+
+    header .menu-dkp-nav li{
+        margin: 0 10px; 
+    }
+
+    header .menu-dkp-nav a{
+        font-size: 14px;
+        color: var(--snow);
+    }
+
+    .hero-contenido .contenido-tituto{
+        font-size: 65px;
+    }
+    
+    .hero-contenido .contenido-subtituto{
+        font-size: 25px;
+        margin-top: -30px;
+    }
+
+    #about, #experiencia {
+        padding: 0 90px;
+    }
+
+    #habilidades{
+        padding: 80px 90px;
+    }
+
+    #habilidades .grid-item-titulo{
+        font-size: 16px;
+        font-weight: 200;
+        color:var(--snow);
+       
+       }
+           
+       #habilidades .habilidades-icon{
+           font-size: 90px;
+           color: var(--deep-sky-blue);
+       }
+}
+
+
+
+/* 7 --- MediaQuery-1267px ----------------- */
+
+
+
+@media screen and (min-width: 1267px) {
+
+    .titulo{
+        font-size: 45px;
+        color: var(--night)
+    }
+
+    header{
+        padding: 50px 110px;
+    }
+
+    .header .logo{
+        font-size: 26px;
+    }
+
+    header .btn-menu{
+        display: none;
+    }
+
+    .menu-mob{
+        display: none;
+    }
+    header .menu-dkp-nav{
+        display: flex;
+        align-items: center;
+    }
+    header .menu-dkp-nav ul{
+        text-transform: uppercase;
+        display: flex;
+    }
+
+    header .menu-dkp-nav li{
+        margin: 0 20px; 
+    }
+
+    header .menu-dkp-nav a{
+        font-size: 14px;
+    }
+
+    .hero-contenido .contenido-tituto{
+        font-size: 85px;
+    }
+    
+    .hero-contenido .contenido-subtituto{
+        font-size: 25px;
+        margin-top: -30px;
+    }
+
+    #about, #experiencia {
+        padding: 0 110px;
+    }
+
+    #habilidades{
+        padding: 80px 110px;
+        padding-bottom: 110px;
+    }
+
+    #about .about-descripcion{
+        font-size: 20px;
+    }
+
+    #experiencia .experiencia-fecha h3{
+        font-size: 19px;
+    }
+    
+    #experiencia .experiencia-posicion{
+        font-size: 22px;
+    }
+    
+    #experiencia .experiencia-empresa{
+        font-size: 20px;
+    }
+    
+    #experiencia .exp-item{
+        font-size: 17px;
+    }
+     
+    #experiencia .experiencia-btn{
+        min-width: 45px;
+        min-height: 45px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #experiencia .experiencia-btn i{
+        font-size: 27px;
+    }
+
+   
+    #habilidades .habilidades-grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+    #habilidades .grid-item-titulo{
+        font-size: 16px;
+    }
+           
+    #habilidades .habilidades-icon{
+           font-size: 90px;
+    }
+
+    footer #contacto{
+        display: flex;
+        gap: 60px;
+    }
+
+    #contacto .contacto-icon{
+        font-size: 30px;
+    }
+
+    #contacto p{
+        margin-top: 5px;
+    }
+
+ 
+}
+
+
+/* 8 --- MediaQuery-1600px ----------------- */
+
+
+
+@media screen and (min-width: 1600px) {
+
+    header{
+        padding: 50px 180px;
+    }
+
+    .header .logo{
+        font-size: 35px;
+    }
+
+    header .btn-menu{
+        display: none;
+    }
+
+    .menu-mob{
+        display: none;
+    }
+   
+    header .menu-dkp-nav li{
+        margin: 0 25px; 
+    }
+
+    header .menu-dkp-nav a{
+        font-size: 18px;
+    }
+
+    .hero-contenido .contenido-tituto{
+        font-size: 95px;
+    }
+    
+    .hero-contenido .contenido-subtituto{
+        font-size: 30px;
+        margin-top: -30px;
+    }
+
+    #about, #experiencia {
+        padding: 0 180px;
+    }
+
+    #habilidades{
+        padding: 80px 180px;
+        padding-bottom: 110px;
+    }
+
+    
+    #experiencia .experiencia-fecha h3{
+        font-size: 25px;
+    }
+    
+    #experiencia .experiencia-posicion{
+        font-size: 30px;
+    }
+    
+    #experiencia .experiencia-empresa{
+        font-size: 28px;
+    }
+    
+    #experiencia .exp-item{
+       font-size: 20px;
+    }
+    
+   
+    #experiencia .experiencia-btn{
+        min-width: 45px;
+        min-height: 45px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #experiencia .experiencia-btn i{
+        font-size: 35px;
+    }
+
+   
+    #habilidades .habilidades-grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+    #habilidades .grid-item-titulo{
+        font-size: 18px;
+        font-weight: 200;
+        color:var(--snow);
+       
+       }
+           
+       #habilidades .habilidades-icon{
+           font-size: 95px;
+           color: var(--deep-sky-blue);
+       }
+
+}
+
+.oculto{
+    display: none;
+}
